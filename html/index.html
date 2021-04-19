@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Food</title>
+    <link rel="shortcut icon" href="../asset/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <!-- MOBILE NAV -->
+    <div class="mb-nav">
+        <div class="mb-move-item"></div>
+        <div class="mb-nav-item active">
+            <a href="#home">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#about">
+                <i class="fas fa-smile-beam"></i>
+            </a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#food-menu-section">
+                <i class="fas fa-list-alt"></i>
+            </a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#review">
+                <i class="fas fa-comment-dots"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!-- END MOBILE NAV -->
+
+    <!-- BACK TO TOP BTN -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-alt-circle-up"></i>
+    </a>
+    <!-- END BACK TO TOP BTN -->
+   
+    <!-- TOP NAVIGATION -->
+    <div class="nav">
+        <div class="menu-wrap">
+            <a href="home" >
+                <div class="logo">
+                    Freshfood
+                </div>
+            </a>
+            <div class="menu h-xs">
+                <a href="#home">
+                    <div class="menu-item active">
+                        Home
+                    </div>
+                </a>
+                <a href="#about">
+                    <div class="menu-item">
+                        About
+                    </div>
+                </a>
+                <a href="#food-menu-section">
+                    <div class="menu-item">
+                        Menu
+                    </div>
+                </a>
+                <a href="#review">
+                    <div class="menu-item">
+                        Reviews
+                    </div>
+                </a>
+            </div>
+            <div class="right-menu">
+                <!-- <div class="login">Login</div> -->
+                <!-- <div class="user">
+                    <i class="fas fa-user-circle user-icon"></i>
+                    <div class="user-infor">
+                        <div class="user-name">
+                            <p>Hi Tiền Anh</p>
+                            <p>tienanhbk96@gmail.com</p>
+                        </div>
+                        <div class="user-logout">
+                            Logout
+                        </div>
+                    </div>
+
+                </div> -->
+
+
+                <div id="form-wrap">
+                    <div id="form-container">
+                        <div id="form-select">
+                            <div class="select-register select" >REGISTER</div>
+                            <div class="select-login ">LOGIN</div>
+                        </div>
+                        <div class="form-register login-active">
+    
+                            <input type="text" id="register-name" placeholder="Username">
+                            <span id="register-name-error"></span><br>
+    
+                            <input type="email" id="register-email" placeholder="Email">
+                            <span id="register-email-error"></span><br>
+    
+                            <input type="password" id="register-password" placeholder="Password">
+                            <span id="register-password-error"></span><br>
+    
+                            <input type="password" id="register-password-confirm" placeholder="Confirm password">
+                            <span id="confirm-password-error"></span><br>
+                            
+                            <button id="register-submit" >REGISTER</button><br>
+
+                            <p id="register-note"></p>
+    
+                        </div>
+                        <div class="form-login">
+                            <input type="email" id="login-email" placeholder="Email">
+                            <span id="login-email-error">Please</span><br>
+    
+                            <input type="text" id="login-password" placeholder="Password">
+                            <span id="login-password-error">Please</span><br>
+    
+                            <button id="login-submit" >LOGIN</button>
+                        </div>
+                    </div>
+                    <div class="login-close">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+
+                </div>
+                <div class="login-overlay"></div>
+
+                <div class="cart-btn">
+                    <i class="fas fa-cart-plus"></i>
+                    <div class="cart-count">
+                        2
+                    </div>
+                </div>
+                
+                <div class="cart-wrap">
+                    <div class="cart-close">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <div class="cart-title">
+                        Your cart
+                    </div>
+                   <div class="cart-content-wrap">
+                        <!-- <div class="cart-content">
+                            <div class="cart-content-img bg-img" style="background-image: url(asset/anh-nguyen-kcA-c3f_3FE-unsplash.jpg);">
+
+                            </div>
+                            <div class="cart-content-detail">
+                                <div class="cart-content-name">
+                                    Táo New Zealand
+                                </div>
+                                <div class="cart-content-repair">
+                                        <button id="button__decrease">-</button>
+                                        <input id="counter" disabled>
+                                        <button id="button__increase">+</button>
+                                </div>
+                            </div>
+                            <div class="cart-content-unit">
+                                <div>
+                                    Đơn giá
+                                </div>
+                                <div class="cart-content-cost">
+                                    $12000
+                                </div>
+                            </div>
+                            <div class="cart-content-remove">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            
+                        </div> -->
+                   </div>
+                    <div class="cart-total">
+                        <!-- <p>Your Total: $0</p>
+                        <button>Thanh toán</button> -->
+                    </div>
+                </div>
+                <div class="cart-overlay"></div>
+                
+            </div>
+           
+        </div>
+    </div>
+    <!-- END TOP NAVIGATION -->
+
+    <!-- SECTION HOME -->
+    <section id="home" class="fullheight align-items-center bg-img bg-img-fixed " style="background-image: url(../asset/brooke-lark-08bOYnH_r_E-unsplash.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-xs-12">
+                    <div class="sologan">
+                        <h1 class="left-to-right play-on-scroll">
+                            Freshfood
+                        </h1>
+                        <p class="left-to-right play-on-scroll delay-2"> 
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod laudantium est, accusamus eligendi dolorum voluptate sint? Dolore at dolor aperiam.
+                        </p>
+                        <div class="left-to-right play-on-scroll delay-4">
+                            <button>
+                                Order now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SECTION HOME -->
+
+    <!-- SECTION ABOUT -->
+    <section class="about fullheight align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-7 col-m-0 h-xs">
+                    <img src="../asset/dan-gold-4_jhDO54BYg-unsplash.jpg" alt="" class="fullwidth left-to-right play-on-scroll">
+                </div>
+                <div class="col-5 col-m-12 col-xs-12 align-items-center">
+                    <div class="about-slogan right-to-left play-on-scroll">
+                        <h3>
+                            <span class="primary-color">We</span> create  <span class="primary-color"> delicious</span> memories for   <span class="primary-color"> you  </span>
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laudantium quibusdam. Architecto a optio ipsam nihil natus labore enim laborum tenetur odio praesentium! Vitae provident iusto expedita architecto, quas rerum?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SECTION ABOUT -->
+
+    <hr>
+    <!-- FOOD MENU SECTION -->
+    <section class="align-items-center bg-img bg-img-fixed" id="food-menu-section" style="background-image: url(../asset/katherine-chase-4MMK78S7eyk-unsplash.jpg);">
+        <div class="container">
+            <div class="food-menu">
+                <h1>
+                    What will <span class="primary-color">you</span> eat today?
+                </h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis praesentium doloribus tempore possimus delectus. Exercitationem unde expedita possimus? Cupiditate, voluptatibus?
+                </p>
+                <div class="food-category">
+                    <div class="zoom play-on-scroll">
+                        <button class="active" data-food-type="all">
+                            All food
+                        </button>
+                    </div>
+                    <div class="zoom play-on-scroll delay-2">
+                        <button data-food-type="meat">
+                            Meat
+                        </button>
+                    </div>
+                    <div class="zoom play-on-scroll delay-4">
+                        <button data-food-type="fish">
+                            Fish
+                        </button>
+                    </div>
+                    <div class="zoom play-on-scroll delay-6">
+                        <button data-food-type="soup">
+                            Soup                   
+                        </button>
+                    </div>
+                    <div class="zoom play-on-scroll delay-8">
+                        <button data-food-type="dessert">
+                            Dessert
+                        </button>
+                    </div>
+                </div>
+                <div class="food-item-wrap all">
+                <!-- <div class="food-item salad-type">
+                        <div class="item-wrap bottom-up play-on-scroll">
+                            <div class="item-img">
+                                <div class="img-holder bg-img" style="background-image: url(asset/Pork-pie.jpg);">
+
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                 <div> 
+                                     <h3>
+                                         Lorem ipsum
+                                     </h3>
+                                     <span>
+                                         120$
+                                     </span>
+                                 </div>
+                                 <div class="cart-btn">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END FOOD MENU SECTION -->
+
+    <!-- REVIEW SECTION -->
+    <section id="review">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-xs-12">
+                    <div class="review-wrap zoom play-on-scroll delay-2">
+                        <div class="review-content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cumque ducimus alias unde hic, aliquid veniam porro consectetur non dolor reiciendis aspernatur debitis minima ullam.
+                            </p>
+                            <div class="review-img bg-img" style="background-image: url(../asset/close-up-portrait-cute-young-woman-holding-textbook-colored-pencils-posing-studio-isolated-pink_176532-9674.jpg);">
+
+                            </div>
+                        </div>
+                        <div class="review-info">
+                            <h3>
+                                Lorem, ipsum dolor.
+                            </h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-xs-12">
+                    <div class="zoosm play-on-scroll">
+                        <div class="review-wrap active">
+                            <div class="review-content">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cumque ducimus alias unde hic, aliquid veniam porro consectetur non dolor reiciendis aspernatur debitis minima ullam.
+                                </p>
+                                <div class="review-img bg-img" style="background-image: url(../asset/michael-dam-mEZ3PoFGs_k-unsplash.jpg);">
+    
+                                </div>
+                            </div>
+                            <div class="review-info">
+                                <h3>
+                                    Lorem, ipsum dolor.
+                                </h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-xs-12">
+                    <div class="review-wrap zoom play-on-scroll delay-4">
+                        <div class="review-content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cumque ducimus alias unde hic, aliquid veniam porro consectetur non dolor reiciendis aspernatur debitis minima ullam.
+                            </p>
+                            <div class="review-img bg-img" style="background-image: url(../asset/portrait-happy-young-man_171337-21716.jpg);">
+
+                            </div>
+                        </div>
+                        <div class="review-info">
+                            <h3>
+                                Lorem, ipsum dolor.
+                            </h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- END REVIEW SECTION -->
+
+    <!-- FOOTER SECTION -->
+    <section class="footer bg-img" style="background-image: url(../asset/nordwood-themes-pYWrdKO5ksI-unsplash.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-m-12 col-xs-12">
+                    <h1>
+                        Freshfood
+                    </h1>
+                    <br>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi harum cupiditate sequi explicabo laboriosam, magni cumque! Officiis, voluptas? Tempora repudiandae sint, ex nemo fugit culpa!
+                    </p>
+                    <br>
+                    <p>Email: example@gmail.com</p>
+                    <p>Phone: +00 123 456 789</p>
+                    <p>Website: freshfood.com</p>
+                </div>
+                <div class="col2 col-m-4 col-xs-12">
+                    <h1>
+                        About us
+                    </h1>
+                    <br>
+                    <p>
+                        <a href="#">Chefs</a>
+                    </p>
+                    <p>
+                        <a href="#">Menu</a>
+                    </p>
+                    <p>
+                        <a href="#">Review</a>
+                    </p>
+                    <p>
+                        <a href="#">Lorem ipsum</a>
+                    </p>
+                </div>
+                <div class="col-4 col-m-8 col-xs-12">
+                    <h1>
+                        Subscribe & media
+                    </h1>
+                    <br>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, eius quam? Et rerum porro numquam earum provident accusamus vel illo.
+                    </p>
+                    <div class="input-group">
+                        <input type="text" placeholder="Enter your email">
+                        <button>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END FOOTER SECTION -->
+
+    <!-- Toast  -->
+    <div id="toast">
+    
+    </div>
+
+   
+</body>
+<script src="../js/data.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/login.js"></script>
+</html>
+

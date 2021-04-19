@@ -1,0 +1,145 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0F9D58;
+    --background-color: #f0f3f7;
+    --secon-color: #9da2ad;
+    --grey: #7a7a7b;
+    --white: #ffffff;
+}
+
+#form-wrap {
+    position: fixed;
+    top: 20vh;
+    left: 50vw;
+    width: 350px;
+    min-width: 250px;
+    max-width: 100%;
+    min-height: 370px;
+    padding: 2rem 3rem;
+    background-color: rgb(241, 243, 241);
+    box-shadow: 2px 2px 2px 2px  rgba(99, 99, 99, 0.5);
+    z-index: 334;
+    transition: 0.5s linear;
+    transform: translate(-50%, 150%);
+}
+
+#form-wrap.transform {
+    transform: translate(-50%, 0%);
+}
+
+#form-container {
+    margin: auto;
+    text-align: center;
+}
+
+#form-select {
+    display: flex;
+    justify-content: space-around;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 800;
+   
+}
+.select-register, 
+.select-login {
+    opacity: 0.3;
+    cursor: pointer;
+}
+.select-register:hover, 
+.select-login:hover {
+     opacity: 0.7;
+}
+
+.select {
+    opacity: 1;
+}
+.form-register,
+.form-login {
+    margin-top: 1rem;
+    display: none;
+    text-align: left;
+}
+
+.form-register input,
+.form-login input {
+    width: 100%;
+    margin-top: 0.5rem;
+    height: 2rem;
+    padding: 1rem 1rem;
+    border: 1px solid;
+    border-radius: 1rem;
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+#form-container button {
+    display: block;
+    margin: auto;
+    font-weight: 500;
+    margin-top: 1rem;
+    padding: 0.5rem 2.5rem;
+    color: var(--primary-color);
+    background-color: var(--white);
+    border: 1px solid var(--primary-color);
+    outline: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    
+}
+
+#form-container button:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.login-active {
+    display: block;
+}
+
+.login-overlay {
+    background-color: rgb(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 333;
+    transition: 2s linear;
+    display: none;
+}
+
+.login-close {
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.login-close:hover {
+    color: red;
+}
+
+#form-container span {
+    color: rgb(241, 76, 76);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    display: inline-block;
+}
+
+#register-note{
+    /* margin-top: 1rem; */
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
