@@ -116,11 +116,14 @@
 
 .login-close {
     position: absolute;
-    top: 0;
-    right: 0.5rem;
-    font-size: 2rem;
+    top: 1rem;
+    right: 1rem;
     color: var(--primary-color);
     cursor: pointer;
+}
+
+.login-close i {
+    font-size: 2rem;
 }
 
 .login-close:hover {

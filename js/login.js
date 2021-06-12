@@ -117,12 +117,14 @@ $('register-submit').onclick = function() {
         )
 
         localStorage.setItem('listUser', JSON.stringify(listUser));
-            $('register-name').value =''
-            $('register-email').value =''
-            $('register-password').value =''
-            $('register-password-confirm').value =''
-
-
+            $('register-name').value ='';
+            $('register-email').value ='';
+            $('register-password').value ='';
+            $('register-password-confirm').value ='';
     }
+}
+
+$('login-submit').onclick = function(){
+    
 }
 

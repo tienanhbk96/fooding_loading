@@ -94,19 +94,24 @@ let cartBtn = document.querySelector('.cart-btn');
 let cartWrap = document.querySelector('.cart-wrap');
 let cartClose = document.querySelector('.cart-close i');
 let cartOverlay = document.querySelector('.cart-overlay');
-
+let hidden = document.getElementsByTagName('html')[0];
 cartBtn.onclick = () =>{
     cartWrap.classList.add('show');
     cartOverlay.style.display = 'block'
+    hidden.style.overflow = 'hidden';
 }
 
 cartClose.onclick = () => {
     cartWrap.classList.remove('show');
     cartOverlay.style.display = 'none'
+    hidden.style.overflow = 'auto';
+
 }
 
 cartOverlay.onclick = () => {
     cartWrap.classList.remove('show');
     cartOverlay.style.display = 'none'
+    hidden.style.overflow = 'auto';
 }
 
+console.log(document.getElementsByTagName('html'));

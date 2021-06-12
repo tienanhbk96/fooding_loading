@@ -4,7 +4,7 @@ const listProduct = [
         id: 1,
         name: 'Pork-pie',
         url:  '../asset/Pork-pie.jpg',
-        cost: 10,
+        cost: 20,
         type: 'meat',
     },
    
@@ -12,7 +12,7 @@ const listProduct = [
         id: 2,
         name: 'Braised tuna',
         url:  '../asset/tuna.jpg',
-        cost: 10,
+        cost: 20,
         type: 'fish',
     },
     
@@ -20,7 +20,7 @@ const listProduct = [
         id: 3,
         name: 'Mixed beef',
         url:  '../asset/jonathan-farber-OCNqOLeCwOc-unsplash.jpg',
-        cost: 10,
+        cost: 30,
         type: 'meat',
     },
 
@@ -28,7 +28,7 @@ const listProduct = [
         id: 4,
         name: 'Crab soup',
         url:  '../asset/Crabsoup.jpg',
-        cost: 10,
+        cost: 15,
         type: 'soup',
     },
     
@@ -36,7 +36,7 @@ const listProduct = [
         id: 5,
         name: 'Steamed fish',
         url:  '../asset/steamedfish.PNG',
-        cost: 10,
+        cost: 40,
         type: 'fish',
     },
 
@@ -44,7 +44,7 @@ const listProduct = [
         id: 6,
         name: 'Soup carry',
         url:  '../asset/supcarry.jpg',
-        cost: 10,
+        cost: 50,
         type: 'soup',
     },
 
@@ -52,7 +52,7 @@ const listProduct = [
         id: 7,
         name: 'Fruit',
         url:  '../asset/fruit.jpg',
-        cost: 10,
+        cost: 5,
         type: 'dessert',
     },
 
@@ -205,7 +205,7 @@ renderListCart()
 
 let total = function(){
     let listCart = localStorage.getItem('listCart') ? JSON.parse(localStorage.getItem('listCart')) : [] ;
-
+    console.log(listCart);
     let cartTotal = document.querySelector('.cart-total');
     let total = 0
     listCart.map((item) => {

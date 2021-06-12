@@ -84,19 +84,64 @@ body, html {
 
 .user {
    position: relative;
+   display: none;
 }
 
-.user-icon {
+.user .user-icon {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user .user-icon i {
     cursor: pointer;
     color: var(--secon-color);
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
-.user-info {
-    position: absolute;
+.user .user-icon span {
+    margin-left: 0.5rem;
+}
 
-    top: 100%;
-    right: 2rem;
+.user .user-infor {
+    width: 100%;
+    min-width: 10rem;
+    background-color: var(--background-color);
+    position: absolute;
+    top: 3.5rem;
+    box-shadow: 0 2px 8px 0px rgba(99, 99, 99, 0.4);
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.user .user-infor li {
+    width: 100%;
+    list-style-type: none;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+.user .user-infor .user-infor-name {
+    display: none;
+}
+
+.user .user-infor .user-logout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user .user-infor .user-logout i {
+    margin-right: 2rem;
+} 
+
+.user .user-infor .user-logout p {
+    display: inline-block;
+}
+
+.user .user-infor .user-infor-item:hover {
+    background-color: var(--secon-color);
 }
 
 .login {
@@ -838,6 +883,21 @@ section {
     display: none;
 }
 
+@media only screen and (max-width:290px) {
+    .cart-btn {
+        margin-left: 1rem;
+    }
+
+    * {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 291px) and (max-width:600px) {
+    .cart-btn {
+        margin-left: 2rem;
+    }
+}
 
 /* mobie < 739px */
 @media only screen and (max-width:739px) {
@@ -857,7 +917,7 @@ section {
     span {
         font-size: inherit;
     }
-    
+
     .cart-btn i {
         font-size: 2rem;
     }
@@ -902,6 +962,17 @@ section {
     .back-to-top {
         bottom: 12vh;
         right: 1vw; 
+    }
+
+    .user .user-icon span {
+        display: none;
+    }
+
+    .user .user-infor {
+        top: 3.4rem;
+    }
+    .user .user-infor .user-infor-name {
+        display: block;
     }
 
     /* Mobile nav */
@@ -1008,7 +1079,7 @@ section {
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
     
     .cart-btn {
-        margin-left: 1.5rem;
+        margin-left: 1rem;
     }
 
     .about {
@@ -1031,7 +1102,7 @@ section {
         transform: unset !important;
     }
 
-    
+
     .back-to-top {
         bottom: 5vh;
         right: 1vw; 
