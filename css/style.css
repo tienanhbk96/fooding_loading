@@ -91,8 +91,19 @@ body, html {
     text-align: center;
     display: flex;
     align-items: center;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: var(--grey);
+    transition: 0.5s ease-in-out;
     cursor: pointer;
 }
+
+.user .user-icon.active {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+}
+
 
 .user .user-icon i {
     cursor: pointer;
@@ -113,6 +124,7 @@ body, html {
     box-shadow: 0 2px 8px 0px rgba(99, 99, 99, 0.4);
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
+    transition: 0.5s ease-in-out;
     display: none;
 }
 

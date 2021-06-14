@@ -37,7 +37,6 @@ for(item of categories) {
     }
 }
 
-
 /* on Scroll animation */
 
 let scroll = window.requestAnimationFrame || function(callback) {window.setTimeout(callback, 1000/60)}
@@ -75,9 +74,6 @@ let bottomNavItems = document.querySelectorAll('.mb-nav-item');
 
 let bottomNavMove = document.querySelector('.mb-move-item');
 
-
-
-
 bottomNavItems.forEach((item, index) => {
     item.onclick = (e) => {
         let currentItem = document.querySelector('.mb-nav-item.active')
@@ -86,7 +82,6 @@ bottomNavItems.forEach((item, index) => {
         bottomNavMove.style.left = index * 25 + '%'
     }
 })
-
 
 // show - hide cart-wrap
 
@@ -113,5 +108,3 @@ cartOverlay.onclick = () => {
     cartOverlay.style.display = 'none'
     hidden.style.overflow = 'auto';
 }
-
-console.log(document.getElementsByTagName('html'));

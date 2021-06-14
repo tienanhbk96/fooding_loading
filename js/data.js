@@ -213,7 +213,7 @@ let total = function(){
 
     return cartTotal.innerHTML =   `
                             <p>Your Total: $${total}</p>
-                            <button>Payment</button>
+                            <button class="cart-pay">Payment</button>
                             `
 }
 total();
@@ -289,6 +289,15 @@ let showCount = function() {
                             </div>
                             `
 }
-showCount()
+showCount();
 
+let payment = function() {
+    document.querySelector('.cart-pay').onclick = () => {
+        if(checkLogin()){
+            document.querySelector('.cart-note').innerHTML = 'Payment success';
+        }else {
+            document.querySelector('.cart-note').innerHTML = 'Please login';
+        }
+    };
+}
 

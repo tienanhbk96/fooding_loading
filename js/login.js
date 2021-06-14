@@ -1,6 +1,8 @@
 window.onload = function() {
     checkLogin();
     checkLogout();
+    payment();
+    console.log(checkLogin())
   };
 
  const selectRegister = document.querySelector('.select-register');
@@ -52,6 +54,7 @@ loginClose.onclick = () => {
 }
 
 userIcon.onclick = () => {
+    userIcon.classList.toggle('active');
     userInfor.classList.toggle('show');
 }
 
@@ -67,6 +70,8 @@ const validEmail = function(email){
 }
 
 $('register-submit').onclick = function() {
+    let listUser= localStorage.getItem('listUser') ? JSON.parse(localStorage.getItem('listUser')) : [];
+
     let registerName = $('register-name').value;
     let registerEmail = $('register-email').value;
     let registerPassword = $('register-password').value;
@@ -83,7 +88,6 @@ $('register-submit').onclick = function() {
 
     // validate email
 
-    
 
     if(!registerEmail){
         $('register-email-error').innerHTML = 'Please enter email';
@@ -94,6 +98,13 @@ $('register-submit').onclick = function() {
     }else{
         $('register-email-error').innerHTML = '';
     }
+
+    listUser.map((item) => {
+        if(registerEmail === item.email){
+            $('register-email-error').innerHTML = 'Email already used, please enter another email email';
+            isValid = false;
+        }
+    });
 
     // validate Password
 
@@ -118,8 +129,6 @@ $('register-submit').onclick = function() {
 
     if(isValid){
         $('register-note').innerHTML = 'Congratulations on successful registration, please login';
-
-        let listUser= localStorage.getItem('listUser') ? JSON.parse(localStorage.getItem('listUser')) : [];
 
         listUser.push(
             {
@@ -182,6 +191,7 @@ $('login-submit').onclick = function(){
 
 const checkLogin = function(){
     let listUser = JSON.parse(localStorage.getItem('listUser'));
+    let logging = false;
     listUser.map((item) => {
         if(item.token === 1){
             login.style.display = 'none';
@@ -189,9 +199,10 @@ const checkLogin = function(){
             document.querySelector('.user-icon-name').innerHTML = item.name;
             document.querySelector('.user-infor-name').innerHTML = 'Hi ' + item.name;
             checkLogout();
-            return true;
+            logging = true;;
         }
     });
+    return logging;
 }
 
 const checkLogout = function(){
@@ -199,14 +210,14 @@ const checkLogout = function(){
     const userLogout = document.querySelector('.user-logout');
 
     userLogout.onclick = () => {
-    listUser.map((item) => {
-        if(item.token === 1){
-            item.token = 0;
-            localStorage.setItem('listUser', JSON.stringify(listUser));
-            login.style.display = 'block';
-            document.querySelector('.user').style.display = 'none';
-        }
-    });
+        listUser.map((item) => {
+            if(item.token === 1){
+                item.token = 0;
+                localStorage.setItem('listUser', JSON.stringify(listUser));
+                login.style.display = 'block';
+                document.querySelector('.user').style.display = 'none';
+            }
+        });
     }
 }
 
