@@ -205,7 +205,6 @@ renderListCart()
 
 let total = function(){
     let listCart = localStorage.getItem('listCart') ? JSON.parse(localStorage.getItem('listCart')) : [] ;
-    console.log(listCart);
     let cartTotal = document.querySelector('.cart-total');
     let total = 0
     listCart.map((item) => {
@@ -214,7 +213,7 @@ let total = function(){
 
     return cartTotal.innerHTML =   `
                             <p>Your Total: $${total}</p>
-                            <button>Thanh toán</button>
+                            <button>Payment</button>
                             `
 }
 total();
@@ -253,9 +252,9 @@ let increaseCount = function(id, index){
     counter.value = itemDecrease.count;
 
     listCart[index].count = itemDecrease.count;
-    localStorage.setItem('listCart', JSON.stringify(listCart))
-    total()
-    renderListCart()
+    localStorage.setItem('listCart', JSON.stringify(listCart));
+    total();
+    renderListCart();
 }
 
 let removeCart = function(id, index){
@@ -291,4 +290,5 @@ let showCount = function() {
                             `
 }
 showCount()
+
 

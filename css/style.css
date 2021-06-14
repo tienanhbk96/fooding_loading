@@ -113,6 +113,11 @@ body, html {
     box-shadow: 0 2px 8px 0px rgba(99, 99, 99, 0.4);
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
+    display: none;
+}
+
+.user .user-infor.show {
+    display: block;
 }
 
 .user .user-infor li {
