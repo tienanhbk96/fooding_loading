@@ -976,7 +976,7 @@ section {
     }
 
     .about {
-        background-image: url(./asset/dan-gold-4_jhDO54BYg-unsplash.jpg);
+        background-image: url('../asset/dan-gold-4_jhDO54BYg-unsplash.jpg');
         background-attachment: fixed;
     }
 
@@ -1129,7 +1129,7 @@ section {
     }
 
     .about {
-        background-image: url(./asset/dan-gold-4_jhDO54BYg-unsplash.jpg);
+        background-image: url('../asset/dan-gold-4_jhDO54BYg-unsplash.jpg');
         background-attachment: fixed;
     }
     .about-slogan.start {
