@@ -2,10 +2,6 @@ window.onload = function() {
     checkLogin();
     checkLogout();
     payment();
-    showCount();
-    showProduct(listProduct);
-    renderListCart();
-
 };
 
  const selectRegister = document.querySelector('.select-register');
