@@ -421,7 +421,7 @@ section {
     color: var(--primary-color);
 }
 
-.sologan button {
+.sologan a {
     padding: 1rem 5rem;
     outline: none;
     border: none;
@@ -433,9 +433,10 @@ section {
     cursor: pointer;
     font-weight: 600;
     transition: 0.5s ease-in-out;
+    display: inline-block;
 }
 
-.sologan button:hover {
+.sologan a:hover {
     background-color: var(--primary-color);
     color: var(--white);
 }
