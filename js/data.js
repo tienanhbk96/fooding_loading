@@ -2,7 +2,7 @@ const listProduct = [
     {
         id: 1,
         name: 'Pork-pie',
-        url:  '../asset/Pork-pie.jpg',
+        url:  './asset/Pork-pie.jpg',
         cost: 20,
         type: 'meat',
     },
@@ -10,7 +10,7 @@ const listProduct = [
     {
         id: 2,
         name: 'Braised tuna',
-        url:  '../asset/tuna.jpg',
+        url:  './asset/tuna.jpg',
         cost: 20,
         type: 'fish',
     },
@@ -18,7 +18,7 @@ const listProduct = [
     {
         id: 3,
         name: 'Mixed beef',
-        url:  '../asset/jonathan-farber-OCNqOLeCwOc-unsplash.jpg',
+        url:  './asset/jonathan-farber-OCNqOLeCwOc-unsplash.jpg',
         cost: 30,
         type: 'meat',
     },
@@ -26,7 +26,7 @@ const listProduct = [
     {
         id: 4,
         name: 'Crab soup',
-        url:  '../asset/Crabsoup.jpg',
+        url:  './asset/Crabsoup.jpg',
         cost: 15,
         type: 'soup',
     },
@@ -34,7 +34,7 @@ const listProduct = [
     {
         id: 5,
         name: 'Steamed fish',
-        url:  '../asset/steamedfish.PNG',
+        url:  './asset/steamedfish.PNG',
         cost: 40,
         type: 'fish',
     },
@@ -42,7 +42,7 @@ const listProduct = [
     {
         id: 6,
         name: 'Soup carry',
-        url:  '../asset/supcarry.jpg',
+        url:  './asset/supcarry.jpg',
         cost: 50,
         type: 'soup',
     },
@@ -50,7 +50,7 @@ const listProduct = [
     {
         id: 7,
         name: 'Fruit',
-        url:  '../asset/fruit.jpg',
+        url:  './asset/fruit.jpg',
         cost: 5,
         type: 'dessert',
     },
@@ -58,7 +58,7 @@ const listProduct = [
     {
         id: 8,
         name: 'Port',
-        url:  '../asset/Pork.jpg',
+        url:  './asset/Pork.jpg',
         cost: 10,
         type: 'meat',
     },
