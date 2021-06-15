@@ -4,12 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 hr {
     color: red;
     height: 1rem;
 }
 :root {
-    --primary-color: #0F9D58;
+    --primary-color: #b6c7bf;
     --background-color: #f0f3f7;
     --secon-color: #9da2ad;
     --grey: #7a7a7b;
@@ -29,6 +30,7 @@ body, html {
 }
 
 /* header */
+
 .nav {
     position: fixed;
     top: 0;
@@ -69,6 +71,7 @@ body, html {
      transition: 0.5s ease-in-out;
      cursor: pointer;
 }
+
 .login:hover,
 .menu-item:hover,
 .menu-item.active {
@@ -94,8 +97,14 @@ body, html {
     padding: 0.5rem 1rem;
     font-weight: 600;
     color: var(--grey);
-    transition: 0.5s ease-in-out;
+    transition: all 0.5s linear;
     cursor: pointer;
+}
+
+.user .user-icon:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 5rem;
 }
 
 .user .user-icon.active {
@@ -103,7 +112,6 @@ body, html {
     background-color: var(--primary-color);
     border-radius: 5rem;
 }
-
 
 .user .user-icon i {
     cursor: pointer;
@@ -120,7 +128,7 @@ body, html {
     min-width: 10rem;
     background-color: var(--background-color);
     position: absolute;
-    top: 3.5rem;
+    top: 4rem;
     box-shadow: 0 2px 8px 0px rgba(99, 99, 99, 0.4);
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
@@ -171,6 +179,7 @@ body, html {
 }
 
 .cart-btn {
+    position: relative;
     width: 3rem;
     height: 3rem;
     margin-left: 3rem;
@@ -181,8 +190,7 @@ body, html {
     color: var(--primary-color);
     font-size: 1.5rem;
     cursor: pointer;
-    transition: 0.5 ease-in-out;
-    position: relative;
+    transition: all 0.5s linear;
 }
 
 .cart-btn:hover {
@@ -202,10 +210,7 @@ body, html {
     text-align: center;
     border-radius: 2rem;
     background-color: rgb(243, 162, 162);
-
 }
-
-
 
 .cart-wrap {
     position: fixed;
@@ -223,7 +228,6 @@ body, html {
     opacity: 1;
     transform: translateX(100%);
     transition: 0.5s linear;
-
 }
 
 .cart-overlay {
@@ -241,7 +245,6 @@ body, html {
 .cart-wrap.show {
     transform: translateX(0%);
 }
-
 
 .cart-close {
     font-size: 2rem;
@@ -272,7 +275,6 @@ body, html {
     opacity: 1;
     transition: all 0.5s linear;
 }
-
 
 .cart-content + .cart-content {
     margin-top: 2rem;
@@ -307,7 +309,6 @@ body, html {
     border: none;
     outline: none;
     cursor: pointer;
-    
 }
 
 .cart-content-repair input {
@@ -356,6 +357,12 @@ body, html {
     font-weight: 600;
 }
 
+.cart-note {
+    color: red;
+    text-align: center;
+    margin-top: 2rem;
+}
+
 .cart-total button {
     padding: 0.5rem 2rem;
     margin-top: 1rem;
@@ -373,7 +380,6 @@ body, html {
     color: var(--white);
     background-color: var(--primary-color);
 }
-
 
 .fullheight {
     height: 100vh;
@@ -438,8 +444,6 @@ section {
     width: 100%;
 }
 
-
-
 /* about` */
 
 #about img {
@@ -458,7 +462,6 @@ section {
 
 .about-slogan.start {
     transform: translateX(-10rem) !important;  
-
 }
 
 .about-slogan h3 {
@@ -489,6 +492,7 @@ section {
 .food-category {
     display: flex;
 }
+
 .food-category button {
     padding: 0.5rem 2.5rem;
     margin: 0 1rem;
@@ -522,7 +526,7 @@ section {
 }
 
 .item-wrap {
-    
+
     height: 100%;
     transition: 0.4s ease-in-out;
     cursor: pointer;
@@ -572,7 +576,6 @@ section {
     text-align: left;
 }
 
-
 /* review */
 
 .review-wrap {
@@ -618,6 +621,36 @@ section {
     color: var(--primary-color);
 }
 
+.success {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 200rem;
+    text-align: center;
+    color: red;
+    background-color: rgb(238, 231, 231, 0.8);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    position: fixed;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+    transition: 0.5s linear;
+    opacity: 0;
+}
+
+.success i {
+    margin-top: 2rem;
+    display: block;
+    color: var(--primary-color);
+    font-size: 5rem;
+}
+
+.show_success {
+    opacity: 1;
+    display: block;
+}
+
 .footer {
     color: var(--white);
 }
@@ -634,7 +667,6 @@ section {
     justify-content: space-between;
     margin-top: 2rem;
     position: relative;
-
 }
 
 .input-group input {
@@ -657,7 +689,6 @@ section {
     color: var(--white);
     font-weight: 600;
     cursor: pointer;
-   
 }
 
 .back-to-top {
@@ -718,7 +749,7 @@ section {
 }
 
 .bottom-up {
-    transform: translateY(30%);
+    /* transform: translateY(30%); */
     transition: 0.8s ease-in-out;
 }
 
@@ -750,8 +781,6 @@ section {
     transition-delay: .12s;
 } 
 
-
-
 /* Toast */
 
 #toast {
@@ -760,7 +789,6 @@ section {
     right: 1.5rem;
     z-index: 88;
 }
-
 
 .toast-item {
     min-width: 290px;
@@ -917,6 +945,7 @@ section {
 }
 
 /* mobie < 739px */
+
 @media only screen and (max-width:739px) {
     
     * {
@@ -986,7 +1015,7 @@ section {
     }
 
     .user .user-infor {
-        top: 3.4rem;
+        top: 3.9rem;
     }
     .user .user-infor .user-infor-name {
         display: block;

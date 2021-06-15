@@ -7,7 +7,7 @@ window.onscroll = () => {
     }else{
         backToTopBtn.style.display = 'none';
     }
-}
+};
 
 // active menu
 
@@ -18,14 +18,12 @@ for (let item of menuItems) {
         currentMenu.classList.remove('active');
         item.classList.add('active');
     }
-}
+};
 
 // food category
 
 let foodMenuList = document.querySelector('.food-item-wrap');
-
 let foodCategory = document.querySelector('.food-category');
-
 let categories = foodCategory.querySelectorAll('.food-category  button');
 
 for(item of categories) {
@@ -34,8 +32,8 @@ for(item of categories) {
         currentCard.classList.remove('active');
         e.target.classList.add('active'); 
         foodMenuList.classList = 'food-item-wrap ' + e.target.getAttribute('data-food-type');
-    }
-}
+    };
+};
 
 /* on Scroll animation */
 
@@ -45,7 +43,6 @@ let elToShow = document.querySelectorAll('.play-on-scroll')
 
 isElInViewPort = (el) => {
     let rect = el.getBoundingClientRect()
-
     return (
         (rect.top <= 0 && rect.bottom >= 0)
         ||
@@ -63,6 +60,7 @@ loop = () => {
             item.classList.remove('start');
         }
     })
+
     scroll(loop)
     
 }
@@ -71,15 +69,14 @@ loop();
 // mobile nav 
 
 let bottomNavItems = document.querySelectorAll('.mb-nav-item');
-
 let bottomNavMove = document.querySelector('.mb-move-item');
 
 bottomNavItems.forEach((item, index) => {
     item.onclick = (e) => {
-        let currentItem = document.querySelector('.mb-nav-item.active')
-        currentItem.classList.remove('active')
-        item.classList.add('active')
-        bottomNavMove.style.left = index * 25 + '%'
+        let currentItem = document.querySelector('.mb-nav-item.active');
+        currentItem.classList.remove('active');
+        item.classList.add('active');
+        bottomNavMove.style.left = index * 25 + '%';
     }
 })
 
@@ -90,21 +87,21 @@ let cartWrap = document.querySelector('.cart-wrap');
 let cartClose = document.querySelector('.cart-close i');
 let cartOverlay = document.querySelector('.cart-overlay');
 let hidden = document.getElementsByTagName('html')[0];
+
 cartBtn.onclick = () =>{
     cartWrap.classList.add('show');
-    cartOverlay.style.display = 'block'
+    cartOverlay.style.display = 'block';
     hidden.style.overflow = 'hidden';
-}
+};
 
 cartClose.onclick = () => {
     cartWrap.classList.remove('show');
-    cartOverlay.style.display = 'none'
+    cartOverlay.style.display = 'none';
     hidden.style.overflow = 'auto';
-
-}
+};
 
 cartOverlay.onclick = () => {
     cartWrap.classList.remove('show');
-    cartOverlay.style.display = 'none'
+    cartOverlay.style.display = 'none';
     hidden.style.overflow = 'auto';
-}
+};
