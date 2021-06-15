@@ -168,20 +168,26 @@ $('login-submit').onclick = function(){
 
     if(isLogin){
         let listUser = localStorage.getItem('listUser') ? JSON.parse(localStorage.getItem('listUser')) : [];
+        console.log(listUser);
+        if(listUser.length === 0){
+            $('login-note').innerHTML = 'Email or password is wrong';
+        }else{
+        console.log('b');
+            listUser.map((item) => {
+                if(loginEmail === item.email && loginPassword == item.password){
+                    item.token = 1;
+                    localStorage.setItem('listUser', JSON.stringify(listUser));
+                    $('login-note').innerHTML = 'Congratulations, you have successfully logged in';
+                    formWrap.classList.remove('transform');
+                    loginOverlay.style.display = `none`;
+                    showMessage('Login success');
+                    checkLogin();
+                }else{
+                    $('login-note').innerHTML = 'Email or password is wrong';
+                };
+            });
+        }
         
-        listUser.map((item) => {
-            if(loginEmail === item.email && loginPassword == item.password){
-                item.token = 1;
-                localStorage.setItem('listUser', JSON.stringify(listUser));
-                $('login-note').innerHTML = 'Congratulations, you have successfully logged in';
-                formWrap.classList.remove('transform');
-                loginOverlay.style.display = `none`;
-                showMessage('Login success');
-                checkLogin();
-            }else{
-                $('login-note').innerHTML = 'Email or password is wrong';
-            };
-        });
     };
 };
 

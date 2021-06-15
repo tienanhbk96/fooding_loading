@@ -81,6 +81,13 @@
     outline: none;
 }
 
+.form-login #login-note {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: var(--primary-color);
+}
 #form-container button {
     display: block;
     margin: auto;
