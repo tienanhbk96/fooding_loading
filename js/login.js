@@ -167,7 +167,7 @@ $('login-submit').onclick = function(){
     };
 
     if(isLogin){
-        let listUser = JSON.parse(localStorage.getItem('listUser'));
+        let listUser = localStorage.getItem('listUser') ? JSON.parse(localStorage.getItem('listUser')) : [];
         
         listUser.map((item) => {
             if(loginEmail === item.email && loginPassword == item.password){
@@ -188,7 +188,7 @@ $('login-submit').onclick = function(){
 // Check Login
 
 const checkLogin = function(){
-    let listUser = JSON.parse(localStorage.getItem('listUser'));
+    let listUser = localStorage.getItem('listUser') ? JSON.parse(localStorage.getItem('listUser')) : [];
     let logging = false;
     
     listUser.map((item) => {
