@@ -75,7 +75,7 @@ let showProduct = function(listProduct) {
 listProduct.map((item, index) => {
       foodItems.innerHTML = foodItems.innerHTML + 
                                 `<div class="food-item ${item.type} col-m-4">
-                                    <div class="item-wrap bottom-up play-on-scroll">
+                                    <div class="item-wrap wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.5s">
                                        <div class="item-img">
                                            <div class="img-holder bg-img" style="background-image: url(${item.url});">
                                            </div>
@@ -207,16 +207,13 @@ renderListCart();
 
 const total = function(){
     let listCart = localStorage.getItem('listCart') ? JSON.parse(localStorage.getItem('listCart')) : [] ;
-    let cartTotal = document.querySelector('.cart-total');
+    let cartTotal = document.querySelector('.cart-total p');
     let total = 0;
     listCart.map((item) => {
        total += item.count*item.cost; 
     });
 
-    return cartTotal.innerHTML =   `
-                                    <p>Your Total: $${total}</p>
-                                    <button class="cart-pay">Payment</button>
-                                    `
+    return cartTotal.innerHTML =   `Your Total: $${total}`;
 };
 
 total();
@@ -296,6 +293,7 @@ let payment = function() {
         console.log('a');
         if(checkLogin()){
             showMessage('Payment success');
+            document.querySelector('.cart-note').innerHTML = "";
         }else {
             document.querySelector('.cart-note').innerHTML = "Please Login";
         }
