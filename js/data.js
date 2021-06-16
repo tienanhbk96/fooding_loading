@@ -309,4 +309,3 @@ let showMessage = function(message) {
         document.querySelector('.success').classList.remove('show_success');
     }, 2000);
 };
-
